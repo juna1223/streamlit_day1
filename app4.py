@@ -29,13 +29,13 @@ def main():
         st.write('데이터가 없습니다.')
 
     language = ['Python', 'C', 'Java', 'Go' ]
-    my_choice = st.selectbox('좋아하는 언어를 선택하세요')
+    my_choice = st.selectbox('좋아하는 언어를 선택하세요',language)
     if my_choice == 'C' :
         st.write('저는 C가 좋아요')
     elif my_choice == 'Python' :
         st.write('파이썬이 최고다')
 
-    choice_list = st.multiselect("여러개를 선택할 수 있습니다")
+    choice_list = st.multiselect("여러개를 선택할 수 있습니다",language)
     st.write(choice_list)
     # 여러분이 디버깅을 하고 싶으면,
     # 파이썬의 print 함수를 이용하면, 아래의 터미널에
@@ -46,6 +46,14 @@ def main():
     print(choice_list)
     print(df[choice_list])
     st.dataframe(df[choice_list])
+
+
+    age = st.slider('나이', 1, 100, values=30)
+
+    st.write('선택한 나이는 {}입니다.'.format(age))
+    
+    with st.expander('Hello') :
+        st.text('안녕하세요')
 
 
 if __name__ == '__main__' :

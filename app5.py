@@ -16,6 +16,9 @@ def main():
     
     video_file = open('data/video1.mp4', 'rb')
     st.video(video_file)
-    
+
+    # audio_file = open('data/song.mp3', 'rb')
+    # st.audio(audio_file.read(), format='audio/mp3')
+
 if __name__ == '__main__' :
     main()
